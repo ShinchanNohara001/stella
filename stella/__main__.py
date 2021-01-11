@@ -425,11 +425,7 @@ def main():
         LOGGER.info("Using webhooks.")
         updater.start_webhook(listen="127.0.0.1",
                               port=PORT,
-                              url_path=TOKEN)
-
-        if CERT_PATH:
-            updater.bot.set_webhook(url=URL + TOKEN,
-                                    certificate=open(CERT_PATH, 'rb'))
+                              url_path=Token
         else:
             updater.bot.set_webhook(url=URL + TOKEN)
 
