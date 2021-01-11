@@ -66,10 +66,10 @@ RUN pip3 install --upgrade pip setuptools
 
 # Copy Python Requirements to /root/SaitamaRobot
 RUN git clone -b shiken https://github.com/AnimeKaizoku/SaitamaRobot /root/SaitamaRobot
-WORKDIR /root/SaitamaRobot
+WORKDIR /root/stella
 
 #Copy config file to /root/SaitamaRobot/SaitamaRobot
-COPY ./stella/sample_config.py ./stella/config.py* /root/SaitamaRobot/SaitamaRobot/
+COPY ./stella/sample_config.py ./stella/config.py* /root/stella/stella/
 
 ENV PATH="/home/bot/bin:$PATH"
 
